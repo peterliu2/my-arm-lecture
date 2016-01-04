@@ -5,10 +5,10 @@ int dividebytwo(int a);
 int main(void)
 {
 	int a, b, d;
-	a = -6;
+	a = -10;
 	b = 8;
 	d = dividebytwo(a) / dividebytwo(b);
-	printf("a/2 / b/2 is %d\n", d);
+	printf("2a * 2b is %d\n", d);
 
 	return 0;
 }

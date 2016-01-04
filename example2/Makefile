@@ -1,6 +1,6 @@
 CC	= arm-linux-gnueabihf-gcc
 AS	= arm-linux-gnueabihf-as
-CFLAGS	= -O2 -ggdb -Wall
+CFLAGS	=  -ggdb -Wall
 LDFLAGS = -fno-stack-protector
 
 objects	= example2.o multiply.o

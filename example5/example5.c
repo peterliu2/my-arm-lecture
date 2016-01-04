@@ -7,12 +7,11 @@ int main(void)
 {
 	int a, b, x, d;
 	a = 8;
-	b = 9;
+	b = 8;
 
 	asm("mrs %[result], apsr" : [result] "=r" (x) : );
-
+	
 	d = (a ^ b) > 0 ? add(a,b) : subtract(b,a);
-
 	printf("a & b is %d\n", d);
 	printf("Before operation, apsr was %x\n",x);
 

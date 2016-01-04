@@ -1,15 +1,15 @@
-int add(int, int);
+float div(float, float);
 
 int main()
 {
-	int a, b, c;
+	float a, b, c;
 	a=10;
 	b=12;
-	c=add(a,b);
-	return 0;
+	c=div(a,b);
+	return c;
 }
 
-int add(int a, int b)
+float div(float a, float b)
 {
-	return a+b;
+	return a/b;
 }
