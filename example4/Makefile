@@ -4,14 +4,10 @@ LDFLAGS = -fno-stack-protector
 
 objects	= example4.o
 
-default: example4
-
 .PHONY: default clean
 
 example4: $(objects)
 	$(CC) -o $@ $^
-
-example4.o: example4.c
 
 %.o: %.c
 	$(CC) -c $(CFLAGS) $(LDFLAGS) -o $@ $<

@@ -9,6 +9,7 @@ _start: .global _start
 	mov r7, #4 @ syscall <- sys_write
 	swi 0 @ system call
 
+
 @ sys_exit ( exitcode )
 	@ r7=1 r0
 	mov r0, #0 @ exitcode <- 0

@@ -4,12 +4,12 @@ int main(void)
 {
 	int a, b;
 	int *x;
-	a = 8;
+	a = 100;
 	b = 9;
 
 	x = &a;
 	b = *x + 2;
-	printf("The address of a is 0x%x\n",x);
+	printf("The address of a is %p\n",x);
 	printf("The value of b is now %d\n",b);
 	return 0;
 }

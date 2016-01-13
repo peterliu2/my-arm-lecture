@@ -8,7 +8,7 @@ int main(void)
 	a = 221412523;
 	b = 3;
 	d = multiply(a,b);
-	printf("a * b is %d\n", d);
+	printf("%d * %d is %d\n", a, b, d);
 
 	return 0;
 }

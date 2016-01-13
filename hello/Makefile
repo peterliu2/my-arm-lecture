@@ -5,20 +5,16 @@ LDFLAGS =
 
 objects	= hello.o
 
-default: hello
-
-.PHONY: default clean clobber
+.PHONY: clean
 
 hello: $(objects)
 	$(LD) $(LDFLAGS) -o $@ $^
-
-hello.o: hello.s
 
 %.o: %.s
 	$(AS) -c $(SFLAGS) -o $@ $<
 
 clean:
-	rm -f $(objects) hello
+	-rm -f $(objects) hello
 
 qemu: hello
 	qemu-arm ./hello

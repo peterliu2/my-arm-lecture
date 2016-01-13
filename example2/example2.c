@@ -11,11 +11,11 @@ int main(void)
 	b = 14;
 	c = 3;
 	d = multiply(a,b);
-	printf("a * b is %d\n", d);
+	printf("%d * %d is %d\n",a, b, d);
 	d = multiplyadd(a,b,c);
-	printf("a * b + c is %d\n", d);
+	printf("%d * %d + %d is %d\n",a ,b, c, d);
 	d = multiplysub(a,b,c);
-	printf("c - a * b is %d\n", d);
+	printf("%d - %d * %d is %d\n",c, a, b, d);
 
 	return 0;
 }

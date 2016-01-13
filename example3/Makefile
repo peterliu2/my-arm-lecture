@@ -1,17 +1,13 @@
 CC	= arm-linux-gnueabihf-gcc
-CFLAGS	= -O2  -ggdb -Wall -mcpu=cortex-a15
+CFLAGS	= -ggdb -Wall -mcpu=cortex-a14
 LDFLAGS = -fno-stack-protector
 
 objects	= example3.o
 
-default: example3
-
-.PHONY: default clean
+.PHONY: clean
 
 example3: $(objects)
 	$(CC) -o $@ $^
-
-example3.o: example3.c
 
 %.o: %.c
 	$(CC) -c $(CFLAGS) $(LDFLAGS) -o $@ $<

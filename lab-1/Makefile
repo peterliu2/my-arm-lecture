@@ -6,7 +6,7 @@ objects	= fibseq.o fib.o
 
 default: fibseq
 
-.PHONY: default clean qemu
+.PHONY: default clean qemu qemu_t
 
 fibseq: $(objects)
 	$(CC) $(LDFLAGS) -o $@ $^
@@ -23,12 +23,12 @@ fibseq.o: fibseq.c
 clean:
 	rm -f $(objects) fibseq
 
-QEMU_CMD = qemu-arm -L /usr/arm-linux-gnueabihf ./fibseq &
-CMD = yes 9 | $(call QEMU_CMD) && sleep 1
+QEMU_CMD = qemu-arm -L /usr/arm-linux-gnueabihf ./fibseq
+CMD = yes 35 | $(call QEMU_CMD)
 qemu: fibseq
-	@yes 5 | $(call QEMU_CMD)
-	@sleep 1
-	@yes 6 | $(call QEMU_CMD)
-	@sleep 1
-	@yes 7 | $(call QEMU_CMD)
-	@sleep 1
+	@echo 10 | $(QEMU_CMD)
+	@echo 11 | $(QEMU_CMD)
+	@echo 12 | $(QEMU_CMD)
+
+qemu_t: fibseq
+	@$(CMD)
